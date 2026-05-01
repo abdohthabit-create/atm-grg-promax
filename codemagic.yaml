@@ -1,11 +1,21 @@
 workflows:
   atm_grg_pro:
     name: ATM GRG Pro Build
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+
     environment:
-            flutter: stable
+      flutter: stable
+
     scripts:
-      - flutter pub get
-      - flutter clean
-      - flutter build apk --release
+      - name: Get dependencies
+        script: flutter pub get
+
+      - name: Clean project
+        script: flutter clean
+
+      - name: Build APK
+        script: flutter build apk --release
+
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
