@@ -1,9 +1,7 @@
-
 workflows:
   atm_grg_pro:
     name: ATM GRG Pro Build
-    environment:
-  sdk: ">=3.0.0 <4.0.0"
+    environment: sdk: ">=3.0.0 <4.0.0"
       flutter: stable
 
     scripts:
