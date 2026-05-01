@@ -1,0 +1,13 @@
+workflows:
+  atm_build:
+    name: ATM APK Build
+    environment:
+      flutter: stable
+
+    scripts:
+      - flutter pub get
+      - flutter clean
+      - flutter build apk --release
+
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
