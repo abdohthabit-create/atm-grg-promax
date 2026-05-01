@@ -1,11 +1,27 @@
-workflows:
-  atm_grg_pro:
-    name: ATM GRG Pro Build
-    environment:
-            flutter: stable
-    scripts:
-      - flutter pub get
-      - flutter clean
-      - flutter build apk --release
-    artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+name: atm_grg_pro
+description: ATM Error Diagnostic Application
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
